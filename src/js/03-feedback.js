@@ -29,4 +29,6 @@ function onSubmit(e) {
     localStorage.removeItem('feedback-form-state');
     feedbackForm.reset();
   }
+  alert('все поля нужно заполнить');
+  return;
 }
