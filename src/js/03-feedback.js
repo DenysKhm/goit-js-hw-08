@@ -27,6 +27,6 @@ function onSubmit(e) {
   const { email, message } = feedbackForm.elements;
   if (email.value !== '' && message.value !== '') {
     localStorage.removeItem('feedback-form-state');
-    form.reset();
+    feedbackForm.reset();
   }
 }
