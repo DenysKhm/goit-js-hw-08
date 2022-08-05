@@ -25,10 +25,10 @@ feedbackForm.addEventListener('submit', onSubmit);
 function onSubmit(e) {
   e.preventDefault();
   const { email, message } = feedbackForm.elements;
-  if (email.value !== '' && message.value !== '') {
-    localStorage.removeItem('feedback-form-state');
-    feedbackForm.reset();
+  if (email.value === '' || message.value === '') {
+    alert('все поля нужно заполнить');
+    return;
   }
-  alert('все поля нужно заполнить');
-  return;
+  localStorage.removeItem('feedback-form-state');
+  feedbackForm.reset();
 }
